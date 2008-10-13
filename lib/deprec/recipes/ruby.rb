@@ -5,11 +5,11 @@ Capistrano::Configuration.instance(:must_exist).load do
     namespace :ruby do
             
       SRC_PACKAGES[:ruby] = {
-        :filename => 'ruby-1.8.6-p110.tar.gz',   
-        :md5sum => "5d9f903eae163cda2374ef8fdba5c0a5  ruby-1.8.6-p110.tar.gz", 
-        :dir => 'ruby-1.8.6-p110',  
-        :url => "ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p110.tar.gz",
-        :unpack => "tar zxf ruby-1.8.6-p110.tar.gz;",
+        :filename => 'ruby-1.8.6-p287.tar.gz',   
+        :md5sum => "f6cd51001534ced5375339707a757556  ruby-1.8.6-p287.tar.gz", 
+        :dir => 'ruby-1.8.6-p287',  
+        :url => "ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p287.tar.gz",
+        :unpack => "tar zxf ruby-1.8.6-p287.tar.gz;",
         :configure => %w(
           ./configure
           --with-readline-dir=/usr/local
@@ -38,10 +38,12 @@ Capistrano::Configuration.instance(:must_exist).load do
   
       SRC_PACKAGES[:rubygems] = {
         :filename => 'rubygems-1.2.0.tgz',   
-        :md5sum => "b77a4234360735174d1692e6fc598402  rubygems-1.0.1.tgz", 
+        :md5sum => "b77a4234360735174d1692e6fc598402  rubygems-1.2.0.tgz", 
         :dir => 'rubygems-1.2.0',  
         :url => "http://rubyforge.org/frs/download.php/38646/rubygems-1.2.0.tgz",
         :unpack => "tar zxf rubygems-1.2.0.tgz;",
+      	:configure => "",
+      	:make =>  "",
         :install => 'ruby setup.rb;'
       }
       

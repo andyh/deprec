@@ -1,7 +1,6 @@
 SPEC = Gem::Specification.new do |s|
   s.name = 'deprec'
-  s.version = '1.99.26'
-  s.specification_version = 2 if s.respond_to? :specification_version=  
+  s.version = '1.99.27'
   s.authors = ['Mike Bailey']
   s.description = <<-EOF
       This project provides libraries of Capistrano tasks and extensions to 
